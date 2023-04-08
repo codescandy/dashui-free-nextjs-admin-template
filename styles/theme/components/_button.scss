@@ -1,0 +1,57 @@
+//
+// Extended from bootstrap
+//
+
+
+// btn outline white
+.btn-outline-white {
+    border-color: $gray-300;
+    color: $body-color;
+    &:hover, &:focus {
+        background-color: $gray-100;
+        border-color: $gray-400;
+        color: $body-color;
+    }
+    &.active {
+        background-color: $gray-100;
+        border-color: $gray-400;
+        color: $body-color;
+    }
+}
+
+
+// btn icon
+.btn-icon {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .92969rem;
+    font-weight: 400;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+}
+
+.btn-icon.btn-xs {
+    font-size: .75rem;
+    width: 1.53125rem;
+    height: 1.53125rem;
+}
+
+.btn-icon.btn-sm {
+    font-size: .875rem;
+    width: 2.1875rem;
+    height: 2.1875rem;
+}
+
+.btn-icon.btn-lg {
+    font-size: 1rem;
+    width: 3.36875rem;
+    height: 3.36875rem;
+}

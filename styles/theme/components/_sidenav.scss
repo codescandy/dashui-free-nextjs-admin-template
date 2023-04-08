@@ -1,0 +1,105 @@
+// Docs Sidebar
+
+
+
+// Docs breakpoints
+
+@media(max-width: 768px) {
+  .docs-content {
+    padding: 3.75rem 1.25rem 8.75rem 1.25rem;
+  }
+}
+@media(max-width: 768px) {
+  // Docs nav sidebar
+  .docs-nav-sidebar {
+    .navbar-toggler {
+      background-color: $white;
+    }
+    width: 100%;
+    position: relative;
+    right: 0rem;
+    top: 0;
+  }
+
+  // Docs wrapper
+
+  .docs-wrapper {
+    margin-left: 0rem;
+  }
+  .docs-main-wrapper {
+    .main-content {
+      margin-left: 0rem;
+      width: auto;
+    }
+  }
+  .docs-content {
+    padding: 0rem;
+  }
+}
+
+
+
+
+.doc-sidebar{
+  z-index: 2;
+  width: 13.625rem;
+  border-right: 1px solid $gray-300;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  
+
+
+
+
+  @media(max-width:990px) {
+    width: 100%;
+    position: relative;
+    border: 0;
+    height: auto;
+
+  }
+  @media(min-width: 990px) and (max-width: 1200px) {
+    width: 10rem;
+
+  }
+
+.navbar-nav{
+  padding-top: 1rem;
+  .navbar-header {
+    margin-bottom: .5rem;
+    padding: 0rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    .heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: $gray-400;
+      margin-bottom: 0rem;
+    }
+    span {
+      color: $gray-600;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      color: $gray-800;
+      font-size: .875rem;
+      line-height: 1.25rem;
+      padding: 0.25rem 1rem;
+      font-family: $font-family-sans-serif;
+      font-weight: 500;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+    .nav-link.active {
+      color: $primary;
+    }
+  }
+}
+
+}

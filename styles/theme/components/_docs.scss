@@ -1,0 +1,34 @@
+
+// Copy Button
+
+.copy-button {
+  cursor: pointer;
+  border: 0;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  color: $primary;
+  background-color: $white;
+  position: absolute;
+  top: 0.875rem;
+  right: 0.625rem;
+  border-radius: 0.25rem;
+  border: 1px solid $primary;
+  &:hover {
+    outline: 0;
+    background-color: $white;
+    color: $primary;
+  }
+  &:focus {
+    outline: 0;
+    background-color: $white;
+    color: $primary;
+  }
+  &:active {
+    outline: 0;
+    background-color: $white;
+    color: $primary;
+  }
+}
