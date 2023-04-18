@@ -103,11 +103,7 @@ const NavbarVertical = (props) => {
 					</Link>
 				</div>
 				{/* Dashboard Menu */}
-				<Accordion
-					defaultActiveKey="0"
-					as="ul"
-					className="navbar-nav flex-column"
-				>
+				<Accordion defaultActiveKey="0" as="ul" className="navbar-nav flex-column">
 					{DashboardMenu.map(function (menu, index) {
 						if (menu.grouptitle) {
 							return (
@@ -121,100 +117,90 @@ const NavbarVertical = (props) => {
 							if (menu.children) {
 								return (
 									<Fragment key={index}>
-										{/* main menu / menu level 1 / root items */}
+										{/* main menu / root menu level / root items */}
 										<CustomToggle eventKey={index} icon={menu.icon}>
 											{menu.title}
 											{menu.badge ? (
-												<Badge
-													className="ms-1"
-													bg={menu.badgecolor ? menu.badgecolor : 'primary'}
-												>
+												<Badge className="ms-1" bg={menu.badgecolor ? menu.badgecolor : 'primary'}>
 													{menu.badge}
 												</Badge>
-											) : (
-												''
-											)}
+											) : ('')}
 										</CustomToggle>
-										<Accordion.Collapse
-											eventKey={index}
-											as="li"
-											bsPrefix="nav-item"
-										>
-											<ListGroup
-												as="ul"
-												bsPrefix=""
-												className="nav flex-column"
-											>
-												{menu.children.map(function (menuItem, menuItemIndex) {
-													if (menuItem.children) {
+										<Accordion.Collapse eventKey={index} as="li" bsPrefix="nav-item">
+											<ListGroup as="ul" bsPrefix="" className="nav flex-column">
+												{menu.children.map(function (menuLevel1Item, menuLevel1Index) {
+													if (menuLevel1Item.children) {
 														return (
-															<ListGroup.Item
-																as="li"
-																bsPrefix="nav-item"
-																key={menuItemIndex}
-															>
-																{/* second level menu started  */}
-																<Accordion
-																	defaultActiveKey="0"
-																	className="navbar-nav flex-column"
-																>
+															<ListGroup.Item as="li" bsPrefix="nav-item" key={menuLevel1Index}>
+																{/* first level menu started  */}
+																<Accordion defaultActiveKey="0" className="navbar-nav flex-column">
 																	<CustomToggleLevel2 eventKey={0}>
-																		{menuItem.title}
-																		{menuItem.badge ? (
-																			<Badge
-																				className="ms-1"
-																				bg={
-																					menuItem.badgecolor
-																						? menuItem.badgecolor
-																						: 'primary'
-																				}
-																			>
-																				{menuItem.badge}
+																		{menuLevel1Item.title}
+																		{menuLevel1Item.badge ? (
+																			<Badge className="ms-1" bg={
+																					menuLevel1Item.badgecolor ? menuLevel1Item.badgecolor : 'primary'
+																				}>
+																				{menuLevel1Item.badge}
 																			</Badge>
-																		) : (
-																			''
-																		)}
+																		) : ('')}
 																	</CustomToggleLevel2>
-																	<Accordion.Collapse
-																		eventKey={0}
-																		bsPrefix="nav-item"
-																	>
-																		<ListGroup
-																			as="ul"
-																			bsPrefix=""
-																			className="nav flex-column"
-																		>
-																			{/* third level menu started  */}
-																			{menuItem.children.map(function (
-																				subMenuItem,
-																				subMenuItemIndex
-																			) {
-																				return (
-																					<ListGroup.Item
-																						key={subMenuItemIndex}
-																						as="li"
-																						bsPrefix="nav-item"
-																					>
-																						{generateLink(subMenuItem)}
-																					</ListGroup.Item>
-																				);
+																	<Accordion.Collapse eventKey={0} bsPrefix="nav-item">
+																		<ListGroup as="ul" bsPrefix="" className="nav flex-column">
+																			{/* second level menu started  */}
+																			{menuLevel1Item.children.map(function (menuLevel2Item,menuLevel2Index) {
+																				if (menuLevel2Item.children) {
+																					return (
+																						<ListGroup.Item as="li" bsPrefix="nav-item" key={menuLevel2Index}>
+																							{/* second level accordion menu started  */}
+																							<Accordion defaultActiveKey="0" className="navbar-nav flex-column">
+																								<CustomToggleLevel2 eventKey={0}>
+																									{menuLevel2Item.title}
+																									{menuLevel2Item.badge ? (
+																										<Badge className="ms-1" bg={
+																												menuLevel2Item.badgecolor ? menuLevel2Item.badgecolor : 'primary'
+																											}>
+																											{menuLevel2Item.badge}
+																										</Badge>
+																									) : ('')}
+																								</CustomToggleLevel2>
+																								<Accordion.Collapse eventKey={0} bsPrefix="nav-item">
+																									<ListGroup as="ul" bsPrefix="" className="nav flex-column">
+																										{/* third level menu started  */}
+																										{menuLevel2Item.children.map(function (menuLevel3Item,menuLevel3Index) {
+																											return (
+																												<ListGroup.Item key={menuLevel3Index} as="li" bsPrefix="nav-item">
+																													{generateLink(menuLevel3Item)}
+																												</ListGroup.Item>
+																											);
+																										})}
+																										{/* end of third level menu  */}
+																									</ListGroup>
+																								</Accordion.Collapse>
+																							</Accordion>
+																							{/* end of second level accordion */}
+																						</ListGroup.Item>
+																					);
+																				} else {
+																					return (
+																						<ListGroup.Item key={menuLevel2Index} as="li" bsPrefix="nav-item">
+																							{generateLink(menuLevel2Item)}
+																						</ListGroup.Item>
+																					);
+																				}
+																				
 																			})}
-																			{/* end of third level menu  */}
+																			{/* end of second level menu  */}
 																		</ListGroup>
 																	</Accordion.Collapse>
 																</Accordion>
-																{/* end of second level menu */}
+																{/* end of first level menu */}
 															</ListGroup.Item>
 														);
 													} else {
 														return (
-															<ListGroup.Item
-																as="li"
-																bsPrefix="nav-item"
-																key={menuItemIndex}
-															>
+															<ListGroup.Item as="li" bsPrefix="nav-item" key={menuLevel1Index}>
 																{/* first level menu items */}
-																{generateLink(menuItem)}
+																{generateLink(menuLevel1Item)}
 																{/* end of first level menu items */}
 															</ListGroup.Item>
 														);
@@ -229,28 +215,16 @@ const NavbarVertical = (props) => {
 								return (
 									<Card bsPrefix="nav-item" key={index}>
 										{/* menu item without any childern items like Documentation and Changelog items*/}
-										<Link
-											href={menu.link}
-											className={`nav-link ${location.pathname === menu.link ? 'active' : ''
-												}`}>
-
+										<Link href={menu.link} className={`nav-link ${location.pathname === menu.link ? 'active' : ''}`}>
 											{typeof menu.icon === 'string' ? (
 												<i className={`nav-icon fe fe-${menu.icon} me-2`}></i>
-											) : (
-												menu.icon
-											)}
+											) : (menu.icon)}
 											{menu.title}
 											{menu.badge ? (
-												<Badge
-													className="ms-1"
-													bg={menu.badgecolor ? menu.badgecolor : 'primary'}
-												>
+												<Badge className="ms-1" bg={menu.badgecolor ? menu.badgecolor : 'primary'}>
 													{menu.badge}
 												</Badge>
-											) : (
-												''
-											)}
-
+											) : ('')}
 										</Link>
 										{/* end of menu item without any childern items */}
 									</Card>
