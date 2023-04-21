@@ -1,8 +1,9 @@
 // import node module libraries
 import Head from 'next/head';
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 import SSRProvider from 'react-bootstrap/SSRProvider';
+import { Analytics } from '@vercel/analytics/react';
 
 // import theme style scss file
 import 'styles/theme.scss';
@@ -37,19 +38,12 @@ function MyApp({ Component, pageProps }) {
           url: pageURL,
           title: title,
           description: description,
-          site_name: process.env.siteName,
-          // images: [
-          //   {
-          //     url: '/images/og/Dash-ui-next-js-default-og-image.jpg',
-          //     width: 1200,
-          //     height: 630,
-          //     alt: 'Dash UI NextJS',
-          //   },
-          // ],
+          site_name: process.env.siteName
         }}
       />
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
     </SSRProvider>
   )

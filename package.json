@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
     "apexcharts": "^3.37.3",
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
