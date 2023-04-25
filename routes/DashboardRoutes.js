@@ -148,6 +148,12 @@ export const DashboardMenu = [
 		title: 'Changelog',
 		icon: 'git-pull-request',
 		link: '/changelog'
+	},
+	{
+		id: uuid(),
+		title: 'Download',
+		icon: 'download',
+		link: 'https://codescandy.gumroad.com/l/dashui-nextjs'
 	}
 ];
 
