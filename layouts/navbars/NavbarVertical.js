@@ -1,17 +1,18 @@
+'use client'
 // import node module libraries
 import { Fragment, useContext } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
+import { usePathname   } from 'next/navigation'
 import { useMediaQuery } from 'react-responsive';
 import {
 	ListGroup,
-	Accordion,
 	Card,
 	Image,
 	Badge,
-	useAccordionButton,
-	AccordionContext
 } from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
+import AccordionContext from 'react-bootstrap/AccordionContext';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 // import simple bar scrolling used for notification item scrolling
 import SimpleBar from 'simplebar-react';
@@ -21,8 +22,7 @@ import 'simplebar/dist/simplebar.min.css';
 import { DashboardMenu } from 'routes/DashboardRoutes';
 
 const NavbarVertical = (props) => {
-	const location = useRouter();
-
+	const location = usePathname ()
 	const CustomToggle = ({ children, eventKey, icon }) => {
 		const { activeEventKey } = useContext(AccordionContext);
 		const decoratedOnClick = useAccordionButton(eventKey, () =>
@@ -69,7 +69,7 @@ const NavbarVertical = (props) => {
 		return (
 			(<Link
 				href={item.link}
-				className={`nav-link ${location.pathname === item.link ? 'active' : ''
+				className={`nav-link ${location === item.link ? 'active' : ''
 					}`}
 				onClick={(e) =>
 					isMobile ? props.onClick(!props.showMenu) : props.showMenu
@@ -101,7 +101,7 @@ const NavbarVertical = (props) => {
 					<Link href="/" className="navbar-brand">
 						<Image src="/images/brand/logo/logo.svg" alt="" />
 					</Link>
-				</div>
+				</div>				
 				{/* Dashboard Menu */}
 				<Accordion defaultActiveKey="0" as="ul" className="navbar-nav flex-column">
 					{DashboardMenu.map(function (menu, index) {
@@ -215,7 +215,7 @@ const NavbarVertical = (props) => {
 								return (
 									<Card bsPrefix="nav-item" key={index}>
 										{/* menu item without any childern items like Documentation and Changelog items*/}
-										<Link href={menu.link} className={`nav-link ${location.pathname === menu.link ? 'active' : ''}`}>
+										<Link href={menu.link} className={`nav-link ${location === menu.link ? 'active' : ''}`}>
 											{typeof menu.icon === 'string' ? (
 												<i className={`nav-icon fe fe-${menu.icon} me-2`}></i>
 											) : (menu.icon)}

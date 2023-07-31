@@ -1,14 +1,13 @@
-// import node module libraries
+'use client'
 import React from "react";
 import Link from 'next/link';
 import { Card, Dropdown } from 'react-bootstrap';
 import { MoreVertical } from 'react-feather';
-import dynamic from 'next/dynamic'
-
+import dynamic from 'next/dynamic';
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
-const TasksPerformance = () => {
 
+const Charts = () => {
     const perfomanceChartSeries = [100, 78, 89];
     const perfomanceChartOptions = {
         dataLabels: { enabled: !1 },
@@ -89,7 +88,6 @@ const TasksPerformance = () => {
 
     return (
         <Card className="h-100">
-            {/* card body  */}
             <Card.Body>
                 <div className="d-flex align-items-center justify-content-between">
                     <div>
@@ -98,7 +96,12 @@ const TasksPerformance = () => {
                     <ActionMenu />
                 </div>
                 <div className="mb-8">
-                    <Chart options={perfomanceChartOptions} series={perfomanceChartSeries} type="radialBar" />
+                    <Chart
+                        options={perfomanceChartOptions}
+                        series={perfomanceChartSeries}
+                        type="radialBar"
+                        width="100%"
+                    />
                 </div>
                 {/* icon with content  */}
                 <div className="d-flex align-items-center justify-content-around">
@@ -123,4 +126,4 @@ const TasksPerformance = () => {
     )
 }
 
-export default TasksPerformance
+export default Charts

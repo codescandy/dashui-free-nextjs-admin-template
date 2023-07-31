@@ -4,8 +4,11 @@ import { Col, Row, Form, Card, Button, Image } from 'react-bootstrap';
 // import widget as custom components
 import { FormSelect, DropFiles } from 'widgets';
 
+// import hooks
+import useMounted from 'hooks/useMounted';
 
 const GeneralSetting = () => {
+  const hasMounted = useMounted();
   const countryOptions = [
     { value: 'India', label: 'India' },
     { value: 'US', label: 'US' },
@@ -53,37 +56,34 @@ const GeneralSetting = () => {
               <Col md={9}>
                 {/* dropzone input */}
                 <div>
-                  <Form action="#" className="dropzone mb-3 py-10 border-dashed">
+                  {hasMounted && <Form action="#" className="dropzone mb-3 py-10 border-dashed">
                     <DropFiles />
-                  </Form>
+                  </Form>}
                   <Button variant="outline-white" type="submit">Change </Button>
                 </div>
               </Col>
             </Row>
             <div>
-              {/* border */}
               <div className="mb-6">
                 <h4 className="mb-1">Basic information</h4>
               </div>
+              {hasMounted && 
               <Form>
-                {/* row */}
                 <Row className="mb-3">
-                  <label htmlFor="fullName" className="col-sm-4 col-form-label
-                    form-label">Full name</label>
-                  <div className="col-sm-4 mb-3 mb-lg-0">
-                    <input type="text" className="form-control" placeholder="First name" id="fullName" required />
-                  </div>
-                  <div className="col-sm-4">
-                    <input type="text" className="form-control" placeholder="Last name" id="lastName" required />
-                  </div>
+                  <Form.Label className="col-sm-4 col-form-label form-label" htmlFor="fullName">Full name</Form.Label>
+                  <Col sm={4} className="mb-3 mb-lg-0">
+                    <Form.Control type="text" placeholder="First name" id="fullName" required />
+                  </Col>
+                  <Col sm={4}>
+                    <Form.Control type="text" placeholder="Last name" id="lastName" required />
+                  </Col>
                 </Row>
                 {/* row */}
                 <Row className="mb-3">
-                  <label htmlFor="email" className="col-sm-4 col-form-label
-                    form-label">Email</label>
-                  <div className="col-md-8 col-12">
-                    <input type="email" className="form-control" placeholder="Email" id="email" required />
-                  </div>
+                <Form.Label className="col-sm-4 col-form-label form-label" htmlFor="email">Email</Form.Label>
+                  <Col md={8} xs={12}>
+                    <Form.Control type="email" placeholder="Email" id="email" required />
+                  </Col>
                 </Row>
                 {/* row */}
                 <Row className="mb-3">
@@ -120,9 +120,7 @@ const GeneralSetting = () => {
 
                 {/* Zip code */}
                 <Row className="align-items-center">
-                  <Form.Label className="col-sm-4" htmlFor="zipcode">Zip code
-                    <i className="fe fe-info fs-4 me-2 text-muted icon-xs"></i>
-                  </Form.Label>
+                  <Form.Label className="col-sm-4" htmlFor="zipcode">Zip code</Form.Label>
 
                   <Col md={8} xs={12}>
                     <Form.Control type="text" placeholder="Enter Zip code" id="zipcode" required />
@@ -136,6 +134,7 @@ const GeneralSetting = () => {
 
                 </Row>
               </Form>
+              }
             </div>
           </Card.Body>
         </Card>

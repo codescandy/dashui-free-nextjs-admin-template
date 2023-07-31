@@ -1,3 +1,5 @@
+'use client'
+
 /***************************
 Component : DotBadge
 ****************************
@@ -13,7 +15,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Badge } from 'react-bootstrap';
 
-const DotBadge = ({...props }) => {
+const DotBadge = (props = {
+	bg: 'light-primary',
+	className:'me-2'
+}) => {
 	return (
 		<span className={props.className}>
 		<Badge bg={props.bg} className="badge-dot"></Badge> {props.children}
@@ -24,11 +29,6 @@ const DotBadge = ({...props }) => {
 DotBadge.propTypes = {
 	bg: PropTypes.string,
 	className: PropTypes.string
-};
-
-DotBadge.defaultProps = {
-	bg: 'light-primary',
-	className:'me-2'
 };
 
 export default DotBadge;

@@ -37,7 +37,7 @@ const img = {
 export const DropFiles = (props) => {
 	const [files, setFiles] = useState([]);
 	const { getRootProps, getInputProps } = useDropzone({
-		accept: 'image/*',
+		accept: {'image/*': ['.jpeg', '.jpg', '.png']},
 		onDrop: (acceptedFiles) => {
 			setFiles(
 				acceptedFiles.map((file) =>
