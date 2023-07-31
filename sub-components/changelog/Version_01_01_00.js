@@ -46,7 +46,7 @@ const Version_01_01_00 = () => {
 										<li>Replaced <b>Page Router</b> with <b>App Router</b> and done all required changes to impliment it.</li>
 										<li>Required packages are Updated</li>
 										<li>Added new package <code>react-syntax-highlighter</code></li>
-										<li>Removed <code>prism-react-renderer</code> package</li>
+										<li>Removed <code>prism-react-renderer</code> and <code>next-seo</code> packages</li>
 										<li>Fixed a few bugs</li>
 									</ul>
 								</div>
