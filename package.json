@@ -6,6 +6,23 @@
     "name": "codescandy",
     "url": "https://codescandy.com"
   },
+  "keywords": [
+    "react",
+    "javascript",
+    "admin",
+    "dashboard",
+    "nextjs",
+    "nextjs13",
+    "admin-dashboard",
+    "free",
+    "mui",
+    "admin-template",
+    "admin-panel",
+    "freebies",
+    "nextjs-template",
+    "react-dashboard",
+    "bootstrap 5"
+    ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
