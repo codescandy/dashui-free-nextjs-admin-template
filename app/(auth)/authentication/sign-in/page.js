@@ -7,11 +7,6 @@ import Link from 'next/link';
 // import hooks
 import useMounted from 'hooks/useMounted';
 
-export const metadata = {
-  title: 'Authentication',
-  description: 'Dash UI - Authentication',
-}
-
 const SignIn = () => {
   const hasMounted = useMounted();
   return (
