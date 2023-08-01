@@ -2,6 +2,10 @@
   "name": "dashui-free-nextjs-admin-template",
   "version": "1.1.0",
   "private": true,
+  "author": {
+    "name": "codescandy",
+    "url": "https://codescandy.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,9 +14,9 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.1",
-    "apexcharts": "^3.41.0",
-    "bootstrap": "^5.3.0",
-    "eslint": "8.45.0",
+    "apexcharts": "^3.41.1",
+    "bootstrap": "^5.3.1",
+    "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
     "node-sass": "^9.0.0",
@@ -27,7 +31,7 @@
     "react-feather": "^2.0.10",
     "react-responsive": "^9.0.2",
     "react-syntax-highlighter": "^15.5.0",
-    "sass": "^1.64.1",
+    "sass": "^1.64.2",
     "sass-loader": "^13.3.2",
     "simplebar": "^6.2.5",
     "simplebar-react": "^3.2.4",
