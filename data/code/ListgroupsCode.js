@@ -166,7 +166,7 @@ export const GroupWithIconCode = `
     <ListGroup.Item>
         <span>Created by</span>
         <div className="d-flex mt-2">
-            <Image src={Avatar1} alt="" className="avatar-sm rounded-circle"/>
+            <Image src="/images/avatar/avatar-1.jpg" alt="" className="avatar-sm rounded-circle"/>
             <div className="ms-2">
                 <h5 className="mb-n1">Geeks Courses</h5>
                 <small>Admin</small>

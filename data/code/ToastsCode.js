@@ -73,7 +73,7 @@ export const PlacementCode1 = `
     <ToastContainer className="p-3" position={position}>
         <Toast>
             <Toast.Header closeButton={false}>
-                <Image src={Avatar1} className="rounded me-2 avatar-xs" alt="..." />
+                <Image src="/images/avatar/avatar-1.jpg" className="rounded me-2 avatar-xs" alt="..." />
                 <strong className="me-auto">Bootstrap</strong>
                 <small>11 mins ago</small>
             </Toast.Header>

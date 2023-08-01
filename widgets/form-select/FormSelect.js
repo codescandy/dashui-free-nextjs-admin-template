@@ -3,8 +3,13 @@ import { Fragment } from 'react';
 import { Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-export const FormSelect = (props) => {
-	const { placeholder, defaultselected, options, id, name, onChange, className } = props;
+export const FormSelect = (props={
+	placeholder: '',
+	id: '',
+	name: '',
+	className:''
+}) => {
+	const { placeholder,  options, id, name, onChange, className } = props;
 
 	return (
 		<Fragment>
@@ -23,9 +28,7 @@ export const FormSelect = (props) => {
 				)}
 				{options.map((item, index) => {
 					return (
-						<option key={index} value={item.value} className="text-dark"
-							//selected={defaultselected==item.value}
-							>
+						<option key={index} value={item.value} className="text-dark">
 							{item.label}
 						</option>
 					);
@@ -36,19 +39,11 @@ export const FormSelect = (props) => {
 };
 
 FormSelect.propTypes = {
-	placeholder: PropTypes.string.isRequired,
-	defaultselected: PropTypes.string.isRequired,
+	placeholder: PropTypes.string,
+	defaultselected: PropTypes.string,
 	id: PropTypes.string,
 	name: PropTypes.string,
 	className:PropTypes.string
-};
-
-FormSelect.defaultProps = {
-	placeholder: '',
-	defaultselected: '',
-	id: '',
-	name: '',
-	className:''
 };
 
 export default FormSelect;
