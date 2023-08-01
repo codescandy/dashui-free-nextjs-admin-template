@@ -3,8 +3,8 @@ import 'styles/theme.scss';
 
 export const metadata = {
     title: 'Dash UI - Next.Js Admin Dashboard Template',
-    description: 'Dash is a fully responsive and yet modern premium Nextjs template & snippets. Geek is feature-rich Nextjs components and beautifully designed pages that help you create the best possible website and web application projects. Nextjs Snippet ',
-    keywords: 'Dash UI, Nextjs, Next.js, Course, Sass, landing, Marketing, admin themes, Nextjs admin, Nextjs dashboard, ui kit, web app, multipurpose'
+    description: 'Dash UI - Next JS admin template is free and available on GitHub. Create your stunning web apps with our Free Next js template. An open-source admin dashboard built using the new router, server components, and everything new in Next.js 13.',
+    keywords: 'Dash UI, Next.js 13, Admin dashboard, admin template, web apps, bootstrap 5, admin theme'
 }
 
 export default function RootLayout({ children }) {
