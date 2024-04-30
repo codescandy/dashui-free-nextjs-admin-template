@@ -5,10 +5,6 @@ import React from 'react';
 function Navbar() {
   const pathName = usePathname();
 
-  const handleLogout = () => {
-    localStorage.setItem('isUserLogged', false); // Set isUserLogged to false when logging out
-  };
-
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light-subtle">
@@ -29,11 +25,6 @@ function Navbar() {
               {pathName === '/signup' && (
                 <li className="nav-item bg-warning rounded-2">
                   <a className="nav-link active" aria-current="page" href="/login">Login</a>
-                </li>
-              )}
-              {pathName === '/' && (
-                <li className="nav-item bg-warning rounded-2">
-                  <a className="nav-link active" aria-current="page" href="/login" onClick={handleLogout}>Logout</a>
                 </li>
               )}
             </ul>

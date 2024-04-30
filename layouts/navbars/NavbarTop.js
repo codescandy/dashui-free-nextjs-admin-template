@@ -11,6 +11,9 @@ import {
 import QuickMenu from 'layouts/QuickMenu';
 
 const NavbarTop = (props) => {
+	const handleLogout = () => {
+		localStorage.setItem('isUserLogged', false); // Set isUserLogged to false when logging out
+	};
 	return (
 		<Navbar expanded="lg" className="navbar-classic navbar navbar-expand-lg">
 			<div className='d-flex justify-content-between w-100'>
@@ -32,6 +35,7 @@ const NavbarTop = (props) => {
 				{/* Quick Menu */}
 				<Nav className="navbar-right-wrap ms-2 d-flex nav-top-wrap">
 					<QuickMenu />
+					<a className="nav-link active bg-warning rounded-2 ms-2" aria-current="page" href="/login" onClick={handleLogout}>Logout</a>
 				</Nav>
 			</div>
 		</Navbar>
