@@ -1,5 +1,6 @@
 // import theme style scss file
 import 'styles/theme.scss';
+import Navbar from './navbar';
 
 export const metadata = {
     title: 'Dash UI - Next.Js Admin Dashboard Template',
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className='bg-light'>
+                <Navbar />
                 {children}
             </body>
         </html>

@@ -1,0 +1,25 @@
+
+.fPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px !important;
+  }
+  #form {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-label {
+    width: 100%;
+  }
+  .card-container {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 8px 8px 8px 8px #dbd9d9;
+  }
+  button {
+    margin-top: 10px;
+  }
