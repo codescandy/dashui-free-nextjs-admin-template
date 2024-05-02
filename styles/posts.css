@@ -1,0 +1,6 @@
+.react-bootstrap-table-pagination div{
+    float: inline-start;
+}
+.react-bootstrap-table-pagination-list ul{
+    float: inline-end;
+}
