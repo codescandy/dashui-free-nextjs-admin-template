@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className='bg-light'>
-                {location === "/" ? null : <Navbar />}
+                {(location === "/login" || location === "/signup") ? <Navbar /> : null }
                 {children}
             </body>
         </html>

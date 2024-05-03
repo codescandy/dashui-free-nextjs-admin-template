@@ -42,6 +42,7 @@ export const DashboardMenu = [
 		children: [
 			{ id: uuid(), link: '/pages/profile', name: 'Profile' },
 			{ id: uuid(), link: '/pages/home', name: 'Home' },
+			{ id: uuid(), link: '/pages/students', name: 'StudentData' },
 			{ id: uuid(), link: '/pages/settings', name: 'Settings'},
 			// { id: uuid(), link: '/pages/billing', name: 'Billing' },
 			// { id: uuid(), link: '/pages/pricing', name: 'Pricing'},
