@@ -1,0 +1,10 @@
+.react-bootstrap-table-pagination div{
+    float: inline-start;
+}
+.react-bootstrap-table-pagination-list ul{
+    float: inline-end;
+}
+.icon-border{
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+}
