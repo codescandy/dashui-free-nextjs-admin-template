@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 // import node module libraries
 import { Card, Col, Row, Container } from 'react-bootstrap';
 
@@ -139,7 +140,11 @@ const Documentation = () => {
               </ol>
 
               <hr className="mb-5 mt-5" />
+              <h2 className="mb-0 fw-bold">API Demo:</h2>
+              <p>Here is an API demo using fetch , <Link href="/pages/api-demo"> <code>click here</code></Link></p>
 
+
+              <hr className="mb-5 mt-5" />
               <h2 className="mb-0 fw-bold">File Structure:</h2>
               <p>
                 Inside the zip-file you&apos;ll find the following directories and
