@@ -1,6 +1,6 @@
 {
   "name": "dashui-free-nextjs-admin-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "author": {
     "name": "codescandy",
@@ -21,7 +21,7 @@
     "nextjs-template",
     "react-dashboard",
     "bootstrap 5"
-    ],
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,28 +29,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.0.1",
-    "apexcharts": "^3.41.1",
-    "bootstrap": "^5.3.1",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
+    "@vercel/analytics": "^1.6.1",
+    "apexcharts": "^5.3.6",
+    "bootstrap": "^5.3.8",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.0.8",
+    "next": "16.0.8",
     "node-sass": "^9.0.0",
-    "prism-react-renderer": "^2.0.6",
-    "react": "18.2.0",
-    "react-apexcharts": "^1.4.1",
-    "react-bootstrap": "^2.8.0",
-    "react-bootstrap-icons": "^1.10.3",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "18.2.0",
-    "react-dropzone": "^14.2.3",
+    "prism-react-renderer": "^2.4.1",
+    "react": "19.2.1",
+    "react-apexcharts": "^1.9.0",
+    "react-bootstrap": "^2.10.10",
+    "react-bootstrap-icons": "^1.11.6",
+    "react-dom": "19.2.1",
+    "react-dropzone": "^14.3.8",
     "react-feather": "^2.0.10",
-    "react-responsive": "^9.0.2",
-    "react-syntax-highlighter": "^15.5.0",
-    "sass": "^1.64.2",
-    "sass-loader": "^13.3.2",
-    "simplebar": "^6.2.5",
-    "simplebar-react": "^3.2.4",
-    "uuid": "^9.0.0"
+    "react-responsive": "^10.0.1",
+    "react-syntax-highlighter": "^16.1.0",
+    "sass": "^1.77.6",
+    "sass-loader": "^16.0.6",
+    "simplebar": "^6.3.3",
+    "simplebar-react": "^3.3.2",
+    "uuid": "^13.0.0"
   }
 }
