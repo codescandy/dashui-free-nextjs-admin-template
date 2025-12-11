@@ -1,7 +1,7 @@
 // import node module libraries
 import { Col, Row, Card } from 'react-bootstrap';
 
-const Version_01_01_00 = () => {
+const Version_01_01_01 = () => {
 	const UpdatedSass = [
 		'styles/theme/_utilities.scss',
 		'styles/theme.scss'
@@ -35,7 +35,7 @@ const Version_01_01_00 = () => {
 							<Col lg={3} md={4} sm={12}>
 								<div id="initial">
 									<h5 className="mb-3 fwsemi--bold">
-										<code>v1.1.0</code> - August 1, 2023
+										<code>v1.1.1</code> - December 9, 2025
 									</h5>
 								</div>
 							</Col>
@@ -43,38 +43,14 @@ const Version_01_01_00 = () => {
 								<div>
 									<h4 className="mb-1 fw-semi-bold">Dash UI NextJS Update</h4>
 									<ul>
-										<li>Replaced <b>Page Router</b> with <b>App Router</b> and done all required changes to impliment it.</li>
+										<li>Updated Nextjs to 16.x</li>
+										<li>Updated React to 19.x</li>
 										<li>Required packages are Updated</li>
-										<li>Added new package <code>react-syntax-highlighter</code></li>
-										<li>Removed <code>prism-react-renderer</code> and <code>next-seo</code> packages</li>
+										<li>Removed <code>react-copy-to-clipboard</code> package</li>
 										<li>Fixed a few bugs</li>
 									</ul>
 								</div>
-								<div className="mb-3">
-									<h4>Updated React Files:</h4>
-									<ul>
-										{UpdatedReactFiles.map((item, index) => {
-											return (<li key={index}><code>{item}</code></li>)
-										})}
-									</ul>
-								</div>
 
-								<div className="mb-3">
-									<h4>Updated SCSS Files:</h4>
-									<ul>
-										{UpdatedSass.map((item, index) => {
-											return (<li key={index}><code>{item}</code></li>)
-										})}
-									</ul>
-								</div>
-								<div className="mb-3">
-									<h4>Deleted Components / Layout / Hook / React Files:</h4>
-									<ul>
-										{DeletedFiles.map((item, index) => {
-											return (<li key={index}><code>{item}</code></li>)
-										})}
-									</ul>
-								</div>
 							</Col>
 						</Row>
 					</Card.Body>
@@ -84,4 +60,4 @@ const Version_01_01_00 = () => {
 	);
 };
 
-export default Version_01_01_00;
+export default Version_01_01_01;

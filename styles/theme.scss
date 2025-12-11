@@ -16,8 +16,8 @@
 // Material Design Icons
 @import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css");
 
-// Feathers CSS for Before Icon
-@import url("/fonts/feather-icons/feather.css");
+// Feather Icons
+@import url("../public/fonts/feather-icons/feather.css");
 
 // Bootstrap functions
 @import "~bootstrap/scss/functions";
@@ -40,29 +40,18 @@
 // User
 @import "user";
 
-.heading-permalink{
+.heading-permalink {
+  color: transparent;
+  margin-left: -2rem;
+  &:hover {
     color: transparent;
-    margin-left: -2rem;
-    &:hover{
-        color: transparent;
+  }
 
-
-    }
-
-
-
-&::before {
-    color: rgba(82,95,127,0);
+  &::before {
+    color: rgba(82, 95, 127, 0);
     content: "#";
-
-
-
-}
-&:hover:before{
+  }
+  &:hover:before {
     color: $primary;
-
-
-
-}
-
+  }
 }
